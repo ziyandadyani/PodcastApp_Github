@@ -1,4 +1,4 @@
-# Podcast WebApp
+# Echo Podcast WebApp
 #### About
 This project is a podcast app that allows users to browse various podcast shows, play episodes, and track their favorite episodes.
 
@@ -110,4 +110,4 @@ This project is a podcast app that allows users to browse various podcast shows,
 
 - Users can share their favourites as a publicly accessible URL
 
-Website link: [Audio SORCERER](https://deluxe-florentine-8fa394.netlify.app/)
+netlify link: [Echo](https://animated-begonia-ba673d.netlify.app/)
