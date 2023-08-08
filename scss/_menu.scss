@@ -1,0 +1,127 @@
+.menu-btn {
+    position: fixed;
+    left: 20px;
+    top: 10px;
+    z-index: 4;
+    cursor: pointer;
+    height: 28px;
+    margin-top: 5px;
+    @include easeOut;
+
+    .btn-line {
+        width: 24px;
+        height: 4px;
+        margin-bottom: 5px;
+        background: $primary;
+        @include easeOut;
+    }
+
+    // Rotate Into X With Menu Lines
+    &.close {
+        transform: rotate(180deg)
+        translate(0, 6px);
+
+        .btn-line {
+            // Line 1 - Rotate
+            &:nth-child(1) {
+                transform: rotate(45deg) translate(7px, 6px);
+            }
+            // Line 2 - Rotate
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            // Line 3 - Rotate
+            &:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+        }
+    }
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    visibility: hidden;
+    z-index: 3;
+
+    &.show {
+        visibility: visible;
+    }
+
+    &-nav {
+        float: left;
+        width: 70%;
+        height: 100vh;
+        overflow: hidden;
+        border-radius: 0 15px 15px 0;
+        margin: 0;
+        padding: 0 20px;
+        background-color: $background;
+        list-style: none;
+        transform: translate3d(-100%, 0, 0);
+        @include easeOut;
+
+        &.show {
+            // Slide in from top
+            transform: translate3d(0, 0, 0);
+        }
+    }
+}
+
+.nav-item{
+    font-weight: 600;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    ion-icon {
+        margin-right: 5px;
+        color: $text;
+        font-size: 26px;
+    }
+
+    h4 {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.account {
+    margin: 50px 0 20px 0;
+    padding-top: 10px;
+
+    .account--user {
+        height: 24px;
+        margin-bottom: 40px;
+    
+        .user {
+            font-size: 28px;
+            font-weight: 700;
+            color: $accent;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+
+            ion-icon {
+                margin-right: 5px;
+                color: $text;
+                font-size: 34px;
+            }
+        }
+
+        button {
+            height: 24px;
+            color: $background;
+            background-color: $primary;
+            border: none;
+            border-radius: 5px;
+        }
+    }
+   
+    p {
+        font-size: 12px;
+    }
+}

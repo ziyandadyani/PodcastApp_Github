@@ -1,0 +1,13 @@
+$text: #2b2b2b;
+$background: #fafafa;
+$primary: #2a623d;
+$secondary: #cccccc;
+$accent: #2a8539;
+$background-opacity: 0.6;
+
+$selected-knob: $secondary;
+
+@mixin easeOut {
+    transition: all 0.6s ease-out;
+}
+

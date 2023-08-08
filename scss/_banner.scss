@@ -1,0 +1,44 @@
+.banner {
+    width: 100%;
+    height:max-content;
+    background-color: $secondary;
+    
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+
+    .greeting {
+        font-size: 14px;
+        color: $background;
+        font-style: italic;
+        font-weight: 400;
+    }
+
+    .account--user {
+        height: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    
+        .user {
+            font-size: 28px;
+            font-weight: 700;
+            color: $accent;
+            margin: 0;
+            padding: 0;
+        }
+
+        button {
+            height: 24px;
+            color: $background;
+            background-color: $primary;
+            border: none;
+            border-radius: 5px;
+        }   
+    }
+
+    .notify {
+        font-size: 12px;
+    }
+}

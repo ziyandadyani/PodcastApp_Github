@@ -1,0 +1,96 @@
+.browse--filters {
+    height: 40px;
+    position: sticky;
+    top: 50px;
+    z-index: 1;
+
+    background-color: $background;
+    margin: 10px 20px 5px 0;
+
+    .filter--form {
+        display: flex;
+        align-items: center;
+    
+        h3 {
+            margin: 10px 0 8px 20px;
+        }
+
+        .sort-btn-container {
+            display: inline-flex;
+            overflow: hidden;
+            margin: 0 8px 0 0;
+            padding: 0 2px;
+            position: relative;
+
+            .sort-list {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                padding: 0 8px;
+                margin: 0px;
+                overflow: scroll;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                .sort-btn {
+                height: 24px;
+                padding: 0px 5px;
+                color: $background;
+                background-color: $secondary;
+                border: none;
+                border-radius: 5px;
+                user-select: none;
+                white-space: nowrap;
+
+                    &.active {
+                        color: $background;
+                        background-color: $primary;
+                    }
+
+                    &:hover {
+                        background-color: $accent;
+                    }
+                }
+            }
+        }
+
+        .filters--btn, .filter-btns button {
+
+            height: 25px;
+            padding: 0px 5px;
+            color: $background;
+            background-color: $primary;
+            border: none;
+            border-radius: 5px;
+            user-select: none;
+            white-space: nowrap;
+        }
+    
+        .filter--dialog {
+            position: fixed;
+            top: 100px;
+            width: min-content;
+            height: max-content;
+            border-radius: 10px;
+            border: none;
+            background-color: $background;
+            z-index: 3;
+
+            h3 {
+                margin: 10px 0;
+            }
+
+            .filter-btns {
+                display: flex;
+                flex-direction: column;
+
+                button {
+                    margin: 8px 0;
+                    padding: 5px;
+                }
+            }
+        }
+    }
+}
