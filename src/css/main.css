@@ -1,0 +1,829 @@
+.menu-btn {
+  display: none;
+  position: fixed;
+  left: 20px;
+  top: 10px;
+  z-index: 4;
+  cursor: pointer;
+  height: 28px;
+  margin-top: 5px;
+  transition: all 0.6s ease-out;
+}
+
+.menu-btn .btn-line {
+  width: 24px;
+  height: 4px;
+  margin-bottom: 5px;
+  background: #2a623d;
+  transition: all 0.6s ease-out;
+}
+
+.menu-btn.close {
+  transform: rotate(180deg) translate(0, 6px);
+}
+
+.menu-btn.close .btn-line:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 6px);
+}
+
+.menu-btn.close .btn-line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.close .btn-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  visibility: hidden;
+  z-index: 3;
+}
+
+.menu.show {
+  visibility: visible;
+}
+
+.menu-nav {
+  float: left;
+  width: 70%;
+  height: 100vh;
+  overflow: hidden;
+  border-radius: 0 15px 15px 0;
+  margin: 0;
+  padding: 0 20px;
+  background-color: #fafafa;
+  list-style: none;
+  transform: translate3d(-100%, 0, 0);
+  transition: all 0.6s ease-out;
+}
+
+.menu-nav.show {
+  transform: translate3d(0, 0, 0);
+}
+
+.nav-item {
+  font-weight: 600;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.nav-item ion-icon {
+  margin-right: 5px;
+  color: #2b2b2b;
+  font-size: 26px;
+}
+
+.nav-item h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.account {
+  margin: 50px 0 20px 0;
+  padding-top: 10px;
+}
+
+.account .account--user {
+  height: 24px;
+  margin-bottom: 40px;
+  margin-top: 60px;
+}
+
+.account .account--user .user {
+  font-size: 40px;
+  font-weight: 700;
+  color: #620ade;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.account .account--user .user ion-icon {
+  margin-right: 5px;
+  color: #761212;
+  font-size: 34px;
+}
+
+.account .account--user button {
+  height: 24px;
+  color: #fafafa;
+  background-color: #2a623d;
+  border: none;
+  border-radius: 5px;
+}
+
+.account p {
+  font-size: 12px;
+}
+
+.preview-display {
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 10px;
+  gap: 20px;
+}
+
+.preview-display a {
+  color: #2b2b2b;
+  display: flex;
+  justify-content: center;
+}
+
+.preview-display a:visited {
+  color: #2b2b2b;
+}
+
+.preview-display a .preview {
+  width: 140px;
+  margin-bottom: 10px;
+  padding: 0;
+  border-radius: 10px;
+}
+
+.preview-display a .preview .preview--image {
+  height: 200px;
+  border-radius: 2px;
+}
+
+.preview-display a .preview .preview--title {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: whitesmoke;
+  font-family: 'Poppins', sans-serif;
+}
+
+.preview-display a .preview .preview--details {
+  flex-direction: column;
+  align-items: start;
+  display: flex;
+  flex-direction: column;
+  color: lightgray;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+}
+
+.preview-display a .preview .preview--details p {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+}
+
+.small--preview-display {
+  background-color: black;
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  margin-left: 20px;
+}
+
+/* Hide the scrollbar track and set a thin scrollbar thumb */
+/* For webkit-based browsers like Chrome and Safari */
+.small--preview-display::-webkit-scrollbar {
+  width: 6px;
+  /* Set the width to control the thickness */
+}
+
+/* .container::-webkit-scrollbar-track {
+  display: none; /* Hide the scrollbar track */
+/* } */
+*/ .small--preview-display::-webkit-scrollbar-thumb {
+  background-color: #730e0e;
+  /* Set the color of the scrollbar thumb */
+  border-radius: 3px;
+  /* Rounded corners for the scrollbar thumb */
+}
+
+.small--preview-display-title {
+  margin: 10px 20px;
+  font-family: 'Poppins', sans-serif;
+  color: lightgrey;
+  font-size: 14px;
+
+}
+
+.small--preview-display .preview {
+  min-width: 120px;
+  height: 400px;
+  background: rgb(110, 38, 245);
+  border-radius: 0px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.small--preview-display .preview .preview--image {
+  height: 340px;
+  border-radius: 2px;
+}
+
+.small--preview-display .preview .preview--title {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  color: lightgray;
+}
+
+
+
+.small--preview-display .preview .preview--details {
+  display: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.banner {
+  width: 100%;
+  height: max-content;
+
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.banner .greeting {
+  font-size: 14px;
+  color: #fafafa;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.banner .account--user {
+  height: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+
+}
+
+.banner .account--user .user {
+  font-size: 40px;
+  font-weight: 700;
+  color: rgba(110, 38, 245, 0.656);
+  margin: 0;
+  padding-top: 30px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.banner .account--user button {
+  height: 24px;
+  color: #fafafa;
+  border: none;
+  border-radius: 5px;
+  background: none;
+  font-size: 16px;
+}
+
+.banner .notify {
+  font-size: 16px;
+  color: lightgrey;
+  font-family: 'Poppins', sans-serif;
+  padding-top: 30px;
+}
+
+.browse--filters {
+  height: 40px;
+  position: sticky;
+  top: 50px;
+  z-index: 1;
+  background-color: #fafafa;
+  margin: 10px 20px 5px 0;
+}
+
+.browse--filters .filter--form {
+  display: flex;
+  align-items: center;
+  background-color: black;
+}
+
+.browse--filters .filter--form h3 {
+  margin: 10px 0 8px 20px;
+  color: lightgray;
+  font-family: 'Poppins', sans-serif;
+}
+
+.browse--filters .filter--form .sort-btn-container {
+  display: inline-flex;
+  overflow: hidden;
+  margin: 0 8px 0 0;
+  padding: 0 2px;
+  position: relative;
+}
+
+.browse--filters .filter--form .sort-btn-container .sort-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 8px;
+  margin: 0px;
+  overflow: scroll;
+}
+
+.browse--filters .filter--form .sort-btn-container .sort-list::-webkit-scrollbar {
+  display: none;
+}
+
+.browse--filters .filter--form .sort-btn-container .sort-list .sort-btn {
+  height: 24px;
+  padding: 0px 5px;
+  color: #fafafa;
+  background: none;
+  border: none;
+  border-radius: 5px;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.browse--filters .filter--form .sort-btn-container .sort-list .sort-btn.active {
+  color: lightgray;
+
+}
+
+.browse--filters .filter--form .sort-btn-container .sort-list .sort-btn:hover {
+  background-color: rgb(110, 38, 245);
+
+}
+
+.browse--filters .filter--form .filters--btn,
+.browse--filters .filter--form .filter-btns button {
+  height: 40px;
+  padding: 0px 5px;
+  color: black;
+  background-color: rgb(189, 189, 189);
+  border: none;
+  border-radius: 0px;
+  user-select: none;
+  white-space: nowrap;
+  width: 400px;
+  font-size: 16px;
+}
+
+.browse--filters .filter--form .filter--dialog {
+  position: fixed;
+  top: 100px;
+  width: min-content;
+  height: max-content;
+  border-radius: 10px;
+  border: none;
+  background-color: #fafafa;
+  z-index: 3;
+}
+
+.browse--filters .filter--form .filter--dialog h3 {
+  margin: 10px 0;
+}
+
+.browse--filters .filter--form .filter--dialog .filter-btns {
+  display: flex;
+  flex-direction: column;
+}
+
+.browse--filters .filter--form .filter--dialog .filter-btns button {
+  margin: 8px 0;
+  padding: 5px;
+}
+
+.show-main {
+  padding-top: 40px;
+  display: flex;
+  align-content: first baseline;
+  padding-left: 30px;
+  color: lightgray;
+  margin-bottom: 100px;
+
+
+}
+
+.show-info {
+  width: 600px;
+  padding-right: 20px;
+
+}
+
+.show-info .image {
+  height: 140px;
+  border-radius: 10px;
+}
+
+.show-info .title {
+  color: lightgrey;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.show-info .description {
+  color: lightgrey;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+}
+
+.select-season {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+}
+
+.select-season .season-btn {
+  font-size: 16px;
+  width: 800px;
+  margin: 0;
+  padding-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  background-color: rgb(190, 170, 240);
+}
+
+.select-season .season-btn h4 {
+  width: 30px;
+}
+
+.select-season .season-btn .image {
+  height: 60px;
+  border-radius: 5px;
+}
+
+.select-season .season-btn .season-info {
+  margin: 10px;
+}
+
+.select-season .season-btn .season-info .season-title,
+.select-season .season-btn .season-info p {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-self: flex-start;
+}
+
+.select-season .season-btn .season-info p {
+  font-size: 12px;
+}
+
+.season-dialog {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(190, 170, 240);
+  border: none;
+  position: fixed;
+  top: 0;
+  padding: 10px 20px 20px 20px;
+  margin: 50px 0 0 0;
+}
+
+.season-dialog .back-to-season {
+  border-radius: 50%;
+  height: 26px;
+  width: 26px;
+  padding: 0;
+  border: none;
+  background-color: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.season-dialog .back-to-season ion-icon {
+  font-size: 24px;
+}
+
+.season-dialog .back-to-season:hover {
+  background-color: #2a8539;
+}
+
+.season-dialog .back-to-season:hover ion-icon {
+  color: #fafafa;
+}
+
+.season-dialog .seasons {
+  display: flex;
+  gap: 8px;
+  padding: 10px 0;
+}
+
+.season-dialog .seasons .prev-season,
+.season-dialog .seasons .next-season {
+  background: none;
+  height: 65px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.season-dialog .seasons .prev-season ion-icon,
+.season-dialog .seasons .next-season ion-icon {
+  font-size: 40px;
+  color: rgb(114, 114, 114);
+}
+
+.season-dialog .season-selected {
+  font-size: 16px;
+  width: 100%;
+  height: 65px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  background-color: #cccccc;
+}
+
+.season-dialog .season-selected h4 {
+  width: 30px;
+}
+
+.season-dialog .season-selected .image {
+  height: 60px;
+  border-radius: 5px;
+}
+
+.season-dialog .season-selected .season-info {
+  margin: 10px;
+}
+
+.season-dialog .season-selected .season-info .season-title,
+.season-dialog .season-selected .season-info p {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-self: flex-start;
+}
+
+.season-dialog .season-selected .season-info p {
+  font-size: 12px;
+}
+
+.season-dialog .episode {
+  background-color: #cccccc;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 8fr 1fr;
+  align-items: center;
+  height: 50px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.season-dialog .episode-title {
+  display: flex;
+}
+
+.season-dialog .episode-title small {
+  margin: 0 10px;
+}
+
+.season-dialog .episode-title h5 {
+  margin: 0;
+  padding: 0;
+}
+
+.season-dialog .episode ion-icon {
+  font-size: 26px;
+}
+
+.season-dialog .episodes {
+  height: 60vh;
+  padding-bottom: 85px;
+  overflow-y: scroll;
+}
+
+.season-dialog .episodes::-webkit-scrollbar {
+  visibility: hidden;
+  width: 0;
+}
+
+.audio-player {
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  background-color: rgb(190, 170, 240);
+  padding: 10px;
+  border-radius: 0px;
+  display: flex;
+}
+
+.audio-player button {
+  width: 40px;
+  border-radius: 50%;
+  border: none;
+  margin-right: 5px;
+}
+
+.audio-player audio {
+  height: 40px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: black;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+h1 {
+  margin: 0px;
+  font-weight: 600;
+  font-size: 26px;
+}
+
+
+.header {
+  width: 100vw;
+  height: 50px;
+  background-color: black;
+  padding: 0 20px;
+  padding-left: 60px;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+}
+
+.search-bar {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 1px;
+  background-color: rgb(125, 60, 246);
+  position: sticky;
+  top: 0;
+}
+
+.search-bar .title-search-input {
+  width: 300px;
+  height: 28px;
+  margin-left: 40px;
+  padding: 0 10px;
+  border-radius: 10px 0 0 10px;
+  border: 2px solid #cccccc;
+  border-right: none;
+}
+
+.search-bar button {
+  height: 28px;
+  width: 40px;
+  border-radius: 0 15px 15px 0;
+  border: none;
+  background-color: #cccccc;
+}
+
+.search-bar button ion-icon {
+  font-size: 24px;
+}
+
+ion-icon {
+  font-size: 26px;
+  color: #2a623d;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #cccccc;
+  opacity: 0.6;
+  z-index: 2;
+  visibility: hidden;
+}
+
+.overlay.show {
+  transition: all 0.6s ease-out;
+  visibility: visible;
+}
+
+a {
+  text-decoration: none;
+  color: text;
+}
+
+a:visited {
+  color: #2b2b2b;
+}
+
+@media only screen and (min-width: 500px) {
+  .preview-display {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .menu-nav {
+    width: 50vw;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .preview-display {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.login-page {
+  background-color: rgb(170, 153, 244);
+  width: 600px;
+  height: 400px;
+  border-radius: 20px;
+}
+
+.login-flexbox {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+
+
+}
+
+.login-flex {
+  display: flex;
+  justify-content: center;
+}
+
+.login-label {
+  color: ;
+}
+
+.email-label .password-label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  margin-left: 50px;
+}
+
+.app-name {
+  color: rgb(125, 60, 246);
+  font-size: 25px;
+  padding-right: 150px;
+}
+
+.login-btn {
+  height: 50px;
+  width: 320px;
+  background-color: black;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  margin-left: 135px;
+  margin-top: 50px;
+
+}
+
+.email-input {
+  width: 480px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 40px;
+  margin-left: 20px;
+
+}
+
+.password-input {
+  width: 470px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 40px;
+
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  margin-top: 300px;
+  margin-left: 600px;
+}
