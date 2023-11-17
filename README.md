@@ -88,19 +88,7 @@ This project is a podcast app that allows users to browse various podcast shows,
 
 ✅ Audio player is always visible, so the user can listen to episodes while they browse
 
-- User is prompted to confirm they want to close the page when audio is playing
-
-- App remembers which show and episode the user listened to last when returning to the platform
-
-- App remembers which shows and episodes the user listened to all the way through
-
-- App remembers the timestamp where the user stopped listening within a 10-second accuracy period of closing
-
-- App remembers and shows the timestamp progress of any episode the user has started listening to
-
-- User can "reset" all their progress, effectively removing their listening history
-
-✅ User is presented with a sliding carousel of possible shows they might be interested in on the landing page
+https://github.com/ziyandadyani/ZIYDYA004_GroupNwabisa_ZiyandaDyani_DWA18_FinalCapstoneProject.git
 
 - User can log in via https://app.supabase.com authentication
 
