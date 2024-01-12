@@ -101,36 +101,29 @@ https://github.com/ziyandadyani/ZIYDYA004_GroupNwabisa_ZiyandaDyani_DWA18_FinalC
 netlify link: [Echo](https://animated-begonia-ba673d.netlify.app/)
 
 
-Project Name
-Introduction
-Welcome to [Your Project Name]! This project is designed to [briefly explain the purpose and core functionality of your project]. Whether you're a developer looking to contribute or a user interested in utilizing the features, this README will guide you through everything you need to know.
-
-Usage Instructions
+# Usage Instructions
 To get started with [Your Project Name], follow these simple steps:
 
-Installation:
+# Installation:
 
-bash
-Copy code
-npm install
-Configuration:
+  npm install
+  
+# Configuration:
 
 Adjust the settings in the config file to match your preferences.
 Run the Application:
-
-bash
-Copy code
 npm start
-Open in Your Browser:
-Visit http://localhost:3000 in your browser to see [Your Project Name] in action.
 
-Additional Commands:
+# Open in Your Browser:
+[Echo](https://animated-begonia-ba673d.netlify.app/)
+
+# Additional Commands:
 
 Use npm test for running tests.
 
 Explore other available commands in the package.json file.
 
-Project Structure
+# Project Structure
 
 The project is organized as follows:
 
@@ -153,7 +146,7 @@ The project is organized as follows:
 
 /tests: Test files for unit tests and integration tests.
 
-Screenshots or GIFs
+Screenshots
 <img></img>
 Caption for Screenshot 1
 
